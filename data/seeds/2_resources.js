@@ -4,27 +4,19 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex('project_resources').del()
-  await knex('project_resources').insert([
+  await knex('resources').del()
+  await knex('resources').insert([
     {
-      resource_id: 1,
-      project_id: 1
+      resource_name: 'google',
+      resource_description: 'search google on how to create tables and seeds',
     },
     {
-      resource_id: 1,
-      project_id: 2
+      resource_name: 'bloomtech',
+      resource_description: 'refer to bloomtech on table creation',
     },
     {
-      resource_id: 2,
-      project_id: 1
-    },
-    {
-      resource_id: 2,
-      project_id: 2
-    },
-    {
-      resource_id: 3,
-      project_id: 1
+      resource_name: 'module 4',
+      resource_description: 'module 4 described table creation',
     },
   ]);
 };
